@@ -45,8 +45,7 @@ Where:
 
 Empty body with 201 Created
 
-
-
+____
 
 `DELETE/employees/{id}` - this end-point is called to delete an employee by id.
 
@@ -62,8 +61,7 @@ Empty body
 
 Empty body with 200 Ok
 
-
-
+____
 
 `GET/employees/{id}` - returns a unique employee by ID.
 
@@ -90,6 +88,7 @@ Where:
 `name` - employee name;
 `idDivision` - division id that the employee belongs to.
 
+____
 
 `GET/employees/names/{name}` - returns a list of employees with the specified name.
 
@@ -114,8 +113,7 @@ Empty body
 ]
 ```
 
-
-
+____
 
 `GET/employees/divisions/{id}` - returns a list of employees from the specified division id.
 
@@ -140,8 +138,7 @@ Empty body
 ]
 ```
 
-
-
+____
 
 `GET/extension/employees` - returns a list of all employees.
 
@@ -166,8 +163,7 @@ Empty body
 ]
 ```
 
-
-
+____
 
 `POST/divisions` - this end-point is called to add a new division.
 
@@ -188,8 +184,7 @@ Where:
 
 Empty body with 201 Created
 
-
-
+____
 
 `GET/divisions` - returns a list of all divisions.
 
@@ -213,8 +208,7 @@ Empty body
 ]
 ```
 
-
-
+____
 
 `GET/divisions/{id}` - returns a unique division by ID.
 
@@ -236,8 +230,7 @@ Empty body
 }
 ```
 
-
-
+____
 
 `DELETE/divisions/{id}` - this end-point is called to delete an division by id.
 

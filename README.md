@@ -22,11 +22,12 @@ This API provides HTTP endpoint's and tools for the following:
 * Find a unique division by ID: `GET/divisions/1`
 * Delete a division by ID: `DELETE/divisions/1`
 
-### Details
+## Details
 
 `POST/employees` - this end-point is called to add a new employee.
 
 **Path variables**
+
 No variables
 
 **Request body**
@@ -41,30 +42,41 @@ Where:
 `idDivision`* - division id of the new employee.
 
 **Response on success**
+
 Empty body with 201 Created
+
+
 
 
 `DELETE/employees/{id}` - this end-point is called to delete an employee by id.
 
 **Path variables**
+
 `id` - employee id to be deleted.
 
 **Request body**
+
 Empty body
 
 **Response on success**
+
 Empty body with 200 Ok
+
+
 
 
 `GET/employees/{id}` - returns a unique employee by ID.
 
 **Path variables**
+
 `id` - searched employee id.
 
 **Request body**
+
 Empty body
 
 **Response on success**
+
 200 Ok
 ```json
 {
@@ -82,12 +94,15 @@ Where:
 `GET/employees/names/{name}` - returns a list of employees with the specified name.
 
 **Path variables**
+
 `name` - searched employee name.
 
 **Request body**
+
 Empty body
 
 **Response on success**
+
 200 Ok
 ```json
 [
@@ -98,17 +113,22 @@ Empty body
   }
 ]
 ```
+
+
 
 
 `GET/employees/divisions/{id}` - returns a list of employees from the specified division id.
 
 **Path variables**
+
 `id` - searched division id.
 
 **Request body**
+
 Empty body
 
 **Response on success**
+
 200 Ok
 ```json
 [
@@ -119,17 +139,22 @@ Empty body
   }
 ]
 ```
+
+
 
 
 `GET/extension/employees` - returns a list of all employees.
 
 **Path variables**
+
 No variables
 
 **Request body**
+
 Empty body
 
 **Response on success**
+
 200 Ok
 ```json
 [
@@ -142,9 +167,12 @@ Empty body
 ```
 
 
+
+
 `POST/divisions` - this end-point is called to add a new division.
 
 **Path variables**
+
 No variables
 
 **Request body**
@@ -157,18 +185,24 @@ Where:
 `name`* - name of the new division;
 
 **Response on success**
+
 Empty body with 201 Created
+
+
 
 
 `GET/divisions` - returns a list of all divisions.
 
 **Path variables**
+
 No variables
 
 **Request body**
+
 Empty body
 
 **Response on success**
+
 200 Ok
 ```json
 [
@@ -180,15 +214,20 @@ Empty body
 ```
 
 
+
+
 `GET/divisions/{id}` - returns a unique division by ID.
 
 **Path variables**
+
 `id` - searched division id.
 
 **Request body**
+
 Empty body
 
 **Response on success**
+
 200 Ok
 ```json
 {
@@ -198,21 +237,26 @@ Empty body
 ```
 
 
+
+
 `DELETE/divisions/{id}` - this end-point is called to delete an division by id.
 
 **Path variables**
+
 `id` - division id to be deleted.
 
 **Request body**
+
 Empty body
 
 **Response on success**
+
 Empty body with 200 Ok
 
 
 ## Database
 
-The application uses a postgres database on a remote server. The connection settings are already set.
+The application uses a Postgres database on a remote server. The connection settings are already set.
 
 
 ## Usage

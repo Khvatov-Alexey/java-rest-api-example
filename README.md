@@ -252,6 +252,19 @@ Empty body with 200 Ok
 The application uses a Postgres database on a remote server. The connection settings are already set.
 
 
-## Usage
+## Compile and package
+
+In order to generate this jar, you should run:
+
+`mvn package`
+
+it will clean, compile, generate and test a jar at target directory.
+
+
+## Run
+
+In order to run the API, run the jar simply as following:
+
+`java -jar rest-0.0.1-SNAPSHOT.jar`
 
 By default, the API will be available at [http://localhost:8090](http://localhost:8090)

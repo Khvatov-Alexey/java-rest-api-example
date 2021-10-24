@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/divisions")
 public class DivisionController {
 
     private final DivisionService divisionService;
@@ -19,13 +20,13 @@ public class DivisionController {
         this.divisionService = divisionService;
     }
 
-    @PostMapping(value = "/divisions")
+    @PostMapping
     public ResponseEntity<?> create(@RequestBody Division division) {
         divisionService.create(division);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @GetMapping(value = "/divisions")
+    @GetMapping
     public ResponseEntity<List<Division>> read() {
         final List<Division> divisions = divisionService.readAll();
 
@@ -34,7 +35,7 @@ public class DivisionController {
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @GetMapping(value = "/divisions/{id}")
+    @GetMapping(value = "/{id}")
     public ResponseEntity<Division> read(@PathVariable(name = "id") Integer id) {
         final Division division = divisionService.read(id);
 
@@ -43,7 +44,7 @@ public class DivisionController {
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @DeleteMapping(value = "/divisions/{id}")
+    @DeleteMapping(value = "/{id}")
     public ResponseEntity<?> delete(@PathVariable(name = "id") int id) {
         final boolean deleted = divisionService.delete(id);
 

@@ -9,12 +9,10 @@ import javax.persistence.*;
 @Table(name = "division")
 public class Division {
     @Id
-    @Column(name = "id")
     @SequenceGenerator(name = "divisionIdSeq", sequenceName = "division_id_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "divisionIdSeq")
     private Integer id;
 
-    @Column(name = "name")
     private String name;
 
     public Integer getId() {

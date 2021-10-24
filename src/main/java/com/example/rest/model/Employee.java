@@ -1,28 +1,28 @@
 package com.example.rest.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import com.fasterxml.jackson.annotation.*;
 import javax.persistence.*;
 
 @Entity
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+//@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name = "employee")
 public class Employee {
     @Id
-    @Column(name = "id")
     @SequenceGenerator(name = "employeeIdSeq", sequenceName = "employee_id_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "employeeIdSeq")
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Integer id;
 
-    @Column(name = "name")
     private String name;
 
+    @JsonProperty("id_division")
     @Column(name = "id_division")
     private Integer idDivision;
 
     public Integer getId() {
         return id;
     }
+
     public void setId(Integer id) {
         this.id = id;
     }

@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.*;
 import javax.persistence.*;
 
 @Entity
-//@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name = "employee")
 public class Employee {
     @Id
@@ -22,7 +22,6 @@ public class Employee {
     public Integer getId() {
         return id;
     }
-
     public void setId(Integer id) {
         this.id = id;
     }

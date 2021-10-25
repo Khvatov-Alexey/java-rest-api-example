@@ -15,8 +15,7 @@ This API provides HTTP endpoint's and tools for the following:
 * Find a unique employee by ID: `GET/employees/1`
 * Find employees by name: `GET/employees/names/Robert` - Here Robert is the name we are looking for
 * Find employees by division ID: `GET/employees/divisions/1` - Here 1 is the division ID
-
-* Get a list of all employees: `GET/extension/employees`
+* Get a list of all employees: `GET/employees`
 * Add division: `POST/divisions`
 * Get a list of all divisions: `GET/divisions`
 * Find a unique division by ID: `GET/divisions/1`
@@ -34,12 +33,12 @@ No variables
 ```json
 {
   "name": "string",
-  "idDivision": 1
+  "id_division": 1
 }
 ```
 Where:
 `name`* - name of the new employee;
-`idDivision`* - division id of the new employee.
+`id_division`* - division id of the new employee.
 
 **Response on success**
 
@@ -80,13 +79,13 @@ Empty body
 {
   "id": 1,
   "name": "string",
-  "idDivision": 1
+  "id_division": 1
 }
 ```
 Where:
 `id` - employee id;
 `name` - employee name;
-`idDivision` - division id that the employee belongs to.
+`id_division` - division id that the employee belongs to.
 
 ____
 
@@ -108,7 +107,7 @@ Empty body
   {
     "id": 1,
     "name": "string",
-    "idDivision": 1
+    "id_division": 1
   }
 ]
 ```
@@ -133,14 +132,14 @@ Empty body
   {
     "id": 1,
     "name": "string",
-    "idDivision": 1
+    "id_division": 1
   }
 ]
 ```
 
 ____
 
-`GET/extension/employees` - returns a list of all employees.
+`GET/employees` - returns a list of all employees.
 
 **Path variables**
 
@@ -158,7 +157,7 @@ Empty body
   {
     "id": 1,
     "name": "string",
-    "idDivision": 1
+    "id_division": 1
   }
 ]
 ```

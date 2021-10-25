@@ -42,6 +42,15 @@ public class EmployeeController {
                 : new ResponseEntity<>(HttpStatus.NOT_MODIFIED);
     }
 
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<Employee> read(@PathVariable(name = "id") Integer id) {
+        final Employee employee = employeeService.read(id);
+
+        return employee != null
+                ? new ResponseEntity<>(employee, HttpStatus.OK)
+                : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
     @GetMapping(value = "/divisions/{idDivision}")
     public ResponseEntity<List<Employee>> readByDivision(@PathVariable(name = "idDivision") Integer idDivision) {
         final List<Employee> employees = employeeService.readByDivision(idDivision);
@@ -60,14 +69,7 @@ public class EmployeeController {
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @GetMapping(value = "/{id}")
-    public ResponseEntity<Employee> read(@PathVariable(name = "id") Integer id) {
-        final Employee employee = employeeService.read(id);
 
-        return employee != null
-                ? new ResponseEntity<>(employee, HttpStatus.OK)
-                : new ResponseEntity<>(HttpStatus.NOT_FOUND);
-    }
 
 
 

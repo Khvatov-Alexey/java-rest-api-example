@@ -71,7 +71,7 @@ public class EmployeeController {
         final List<Employee> employees = employeeService.readAll();
 
         return employees != null && !employees.isEmpty()
-                ? new ResponseEntity<>(employees, HttpStatus.OK)
+                ? new ResponseEntity<>(employees, HttpStatus.OKe)
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 

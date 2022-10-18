@@ -18,7 +18,7 @@
         <java.version>11</java.version>
     </properties>
     <scm>
-        <connection>scm:git:https://github.com/Khvatov-Alexey/java-rest-api-example/tree/master</connection>
+        <connection>scm:git:https://github.com/Khvatov-Alexey/java-rest-api-example.git</connection>
         <url>https://github.com/Khvatov-Alexey/java-rest-api-example/tree/master</url>
     </scm>
     <dependencies>

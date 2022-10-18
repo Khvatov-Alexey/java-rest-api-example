@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.example</groupId>
     <artifactId>rest</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
     <name>rest</name>
     <description>rest</description>
     <packaging>jar</packaging>
@@ -18,8 +18,7 @@
         <java.version>11</java.version>
     </properties>
     <scm>
-        <connection>scm:git:https://github.com/Khvatov-Alexey/java-rest-api-example.git</connection>
-        <url>https://github.com/Khvatov-Alexey/java-rest-api-example/tree/master</url>
+        <developerConnection>scm:git:https://github.com/Khvatov-Alexey/java-rest-api-example.git</developerConnection>
     </scm>
     <dependencies>
         <dependency>
@@ -84,11 +83,8 @@
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-scm-plugin</artifactId>
-                <version>1.13.0</version>
-                <configuration>
-                    <connectionType>connection</connectionType>
-                </configuration>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.0-M6</version>
             </plugin>
         </plugins>
     </build>

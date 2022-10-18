@@ -56,7 +56,7 @@ public class EmployeeController {
     }
 
     @GetMapping(value = "/employees/{id}")
-    public ResponseEntity<Employee> read(@PathVariable(name = "id"ф) Integer id) {
+    public ResponseEntity<Employee> read(@PathVariable(name = "id") Integer id) {
         final Employee employee = employeeService.read(id);
 
         return employee != null
